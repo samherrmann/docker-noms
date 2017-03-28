@@ -3,4 +3,4 @@ docker run -d \
     -p 8000:8000 \
     -v data:/data \
     --name noms \
-    samherrmann/noms
+    samherrmann/noms:v7

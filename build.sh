@@ -1,1 +1,1 @@
-docker build --tag samherrmann/noms .
+docker build --tag samherrmann/noms:v7 .
