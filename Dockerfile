@@ -8,7 +8,7 @@ RUN wget https://s3-us-west-2.amazonaws.com/downloadstable.noms.io/jobs/NomsBuil
     && tar -xzf *.tar.gz \
     && rm *.tar.gz
 
-VOLUME data
+VOLUME /data
 EXPOSE 8000
 
-CMD ["./noms", "serve", "data"]
+CMD ["./noms", "serve", "/data"]
