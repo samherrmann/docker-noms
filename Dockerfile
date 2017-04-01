@@ -10,9 +10,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN wget https://s3-us-west-2.amazonaws.com/downloadstable.noms.io/jobs/NomsBuildGoBinaries-v7/4/noms-HEAD-linux-amd64.tar.gz \
     && tar -xzf *.tar.gz \
-    && rm *.tar.gz 
+    && rm *.tar.gz \
+	&& ln -s /opt/noms/noms /usr/bin/noms
 
 VOLUME /data
 EXPOSE 8000
 
-CMD ["./noms", "serve", "/data"]
+CMD ["noms", "serve", "/data"]
